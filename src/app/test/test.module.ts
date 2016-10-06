@@ -3,8 +3,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 // App
-import { StudyComponent } from "./study.component";
-import { ClickImgComponent } from "./shared";
+import { TestComponent } from "./test.component";
 import { DataService, NamesService } from "../shared";
 
 @NgModule({
@@ -12,12 +11,11 @@ import { DataService, NamesService } from "../shared";
         CommonModule
     ],
     declarations: [
-        ClickImgComponent,
-        StudyComponent
+        TestComponent
     ],
     providers: [
         DataService,
         NamesService
     ]
 })
-export class StudyModule {}
+export class TestModule {}

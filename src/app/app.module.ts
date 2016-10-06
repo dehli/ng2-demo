@@ -7,6 +7,7 @@ import { CommonModule } from "@angular/common";
 // App
 import { AppComponent } from "./app.component";
 import { StudyModule } from "./study";
+import { TestModule } from "./test";
 import { routing } from "./app.routing";
 
 @NgModule({
@@ -17,7 +18,8 @@ import { routing } from "./app.routing";
         routing,
 
         // App Modules
-        StudyModule
+        StudyModule,
+        TestModule
     ],
     declarations: [
         AppComponent
