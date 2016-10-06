@@ -4,13 +4,14 @@ import { CommonModule } from "@angular/common";
 
 // App
 import { NamegameComponent } from "./namegame.component";
-import { DataService, NamesService } from "./shared";
+import { DataService, ClickImgComponent, NamesService } from "./shared";
 
 @NgModule({
     imports: [
         CommonModule
     ],
     declarations: [
+        ClickImgComponent,
         NamegameComponent
     ],
     providers: [

@@ -1,9 +1,11 @@
 <div *ngIf="person">
     <h2>{{ person.name }}</h2>
 
-    <img [src]="person.url" />
+    <click-img
+        [url]="person.url"
+        (click)="getRandomPerson()">
+    </click-img>
 
-    <button (click)="getRandomPerson()">New Person</button>
 </div>
 
 <div *ngIf="!person">
