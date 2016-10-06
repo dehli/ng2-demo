@@ -18,13 +18,14 @@ const config = {
     module: {
         loaders: [
             { test: /\.ts$/,   include: APP_DIR, loader: 'ts-loader' },
-            { test: /\.html$/, include: APP_DIR, loader: 'html' }
+            { test: /\.html$/, include: APP_DIR, loader: 'html' },
+            { test: /\.scss$/, include: APP_DIR, loader: 'raw!sass' }
         ]
     },
 
     resolve: {
         root: [APP_DIR],
-        extensions: ['', '.js', '.ts']
+        extensions: ['', '.js', '.ts', '.html']
     },
 
     plugins: [
