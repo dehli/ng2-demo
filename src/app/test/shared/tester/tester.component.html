@@ -1,11 +1,18 @@
-<div *ngIf="person">
+<h4>Current Score: {{ score }}</h4>
+
+<div *ngIf="test">
 
     <img
-        [src]="person.url"
+        [src]="test.person.url"
         alt="image" />
+
+    <button *ngFor="let name of test.names"
+        (click)="clickName(name)">
+        {{name}}
+    </button>
 
 </div>
 
-<div *ngIf="!person">
+<div *ngIf="!test">
     Loading...
 </div>

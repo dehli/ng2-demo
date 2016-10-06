@@ -1,5 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-import { NamesService, Person } from "../../../shared";
+import { Component, EventEmitter, OnInit, Output } from "@angular/core";
+import { NamesService, ITestPerson } from "../../../shared";
 
 @Component({
     selector: "tester",
@@ -8,14 +8,33 @@ import { NamesService, Person } from "../../../shared";
 })
 export class TesterComponent implements OnInit {
 
+    @Output() finishedGame = new EventEmitter<number>();
+
     private score: number;
 
-    private person: Person;
+    private test: ITestPerson;
 
     constructor(private namesService: NamesService) {}
 
     public ngOnInit(): void {
-        this.namesService.getRandomPerson().then(result => this.person = result);
+        this.score = 0;
+        this.newQuestion();
+    }
+
+    private clickName(name: string): void {
+        if (this.test.person.name === name) {
+            this.score += 1;
+        } else {
+            this.finishedGame.emit(this.score);
+            this.score = 0;
+        }
+
+        this.newQuestion();
+    }
+
+    private newQuestion(): void {
+        this.test = null;
+        this.namesService.getRandomTestPerson().then(result => this.test = result);
     }
 
 }

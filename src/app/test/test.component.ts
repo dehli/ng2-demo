@@ -12,7 +12,15 @@ export class TestComponent implements OnInit {
     constructor() {}
 
     public ngOnInit(): void {
-        this.highScore = 0;
+        this.highScore = +localStorage.getItem("HIGH_SCORE");
+    }
+
+    private checkForHighScore(score: number): void {
+        if (score > this.highScore) {
+            alert("CONGRATS! New high score!");
+            localStorage.setItem("HIGH_SCORE", "" + score);
+            this.highScore = score;
+        }
     }
 
 }
