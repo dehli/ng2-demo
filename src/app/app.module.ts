@@ -6,7 +6,7 @@ import { CommonModule } from "@angular/common";
 
 // App
 import { AppComponent } from "./app.component";
-import { NamegameModule } from "./namegame";
+import { StudyModule } from "./study";
 import { routing } from "./app.routing";
 
 @NgModule({
@@ -17,7 +17,7 @@ import { routing } from "./app.routing";
         routing,
 
         // App Modules
-        NamegameModule
+        StudyModule
     ],
     declarations: [
         AppComponent

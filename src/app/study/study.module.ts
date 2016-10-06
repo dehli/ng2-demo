@@ -3,7 +3,7 @@ import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 // App
-import { NamegameComponent } from "./namegame.component";
+import { StudyComponent } from "./study.component";
 import { DataService, ClickImgComponent, NamesService } from "./shared";
 
 @NgModule({
@@ -12,11 +12,11 @@ import { DataService, ClickImgComponent, NamesService } from "./shared";
     ],
     declarations: [
         ClickImgComponent,
-        NamegameComponent
+        StudyComponent
     ],
     providers: [
         DataService,
         NamesService
     ]
 })
-export class NamegameModule {}
+export class StudyModule {}

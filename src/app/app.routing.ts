@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from "@angular/router";
 
-import { NamegameComponent } from "./namegame";
+import { StudyComponent } from "./study";
 
 const routes: Routes = [
-    { path: "", component: NamegameComponent }
+    { path: "study", component: StudyComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);

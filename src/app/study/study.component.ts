@@ -2,11 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { NamesService, Person } from "./shared";
 
 @Component({
-    selector: "namegame",
-    template: require("./namegame.component.html"),
-    styles:  [require("./namegame.component.scss")]
+    selector: "study",
+    template: require("./study.component.html"),
+    styles:  [require("./study.component.scss")]
 })
-export class NamegameComponent implements OnInit {
+export class StudyComponent implements OnInit {
 
     private person: Person;
 

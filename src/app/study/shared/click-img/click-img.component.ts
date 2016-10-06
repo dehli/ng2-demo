@@ -10,20 +10,18 @@ export class ClickImgComponent implements OnInit{
     @Input()  url: string;
     @Output() click = new EventEmitter<MouseEvent>();
 
-    private rotation: number;
+    private fading: boolean;
 
     public ngOnInit(): void {
-        this.rotation = 0;
+        this.fading = false;
     }
 
     private onClick($event: MouseEvent): void {
-        this.rotation += 90;
-        this.rotation %= 360;
+        this.fading = true;
+        setTimeout(() => {
+            this.fading = false;
+        }, 1000);
 
         this.click.emit($event);
-    }
-
-    private getRotation(): any {
-        return `rotate(${ this.rotation}deg)`;
     }
 }
