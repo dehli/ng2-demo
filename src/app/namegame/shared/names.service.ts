@@ -1,10 +1,10 @@
 import { Injectable } from "@angular/core";
-import { DataService, NameGamePerson } from './data.service';
+import { DataService, Person } from './data.service';
 
 @Injectable()
 export class NamesService {
 
-    private promise: Promise<NameGamePerson[]>;
+    private promise: Promise<Person[]>;
 
     constructor(private dataService: DataService) {
         this.initialize();
@@ -14,7 +14,7 @@ export class NamesService {
         this.promise = this.dataService.getNameGame();
     }
 
-    public getRandomPerson(): Promise<NameGamePerson> {
+    public getRandomPerson(): Promise<Person> {
         const promise = new Promise((resolve, reject) => {
             this.promise
                 .then(results => {

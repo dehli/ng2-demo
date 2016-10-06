@@ -1,1 +1,11 @@
-NAMEGAME
+<div *ngIf="person">
+    <h2>{{ person.name }}</h2>
+
+    <img [src]="person.url" />
+
+    <button (click)="getRandomPerson()">New Person</button>
+</div>
+
+<div *ngIf="!person">
+    Loading...
+</div>

@@ -1,7 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 
-//import "../style/app.scss";
-
 @Component({
     selector: "app",
     template: require("./app.component.html"),

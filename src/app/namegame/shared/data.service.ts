@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { Http } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 
-export interface NameGamePerson {
+export interface Person {
     name: string;
     url: string;
 }
@@ -14,7 +14,7 @@ export class DataService {
 
     constructor(private http: Http) {}
 
-    public getNameGame(): Promise<NameGamePerson[]> {
+    public getNameGame(): Promise<Person[]> {
 
         const promise = new Promise((resolve, reject) => {
             this.http.get(DataService.baseURL).forEach(response => {
