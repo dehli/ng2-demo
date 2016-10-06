@@ -1,9 +1,9 @@
 import { RouterModule, Routes } from "@angular/router";
 
-import { AppComponent } from "./app.component";
+import { NamegameComponent } from "./namegame";
 
 const routes: Routes = [
-    { path: "", component: AppComponent }
+    { path: "", component: NamegameComponent }
 ];
 
 export const routing = RouterModule.forRoot(routes);

@@ -5,13 +5,17 @@ import { HttpModule } from "@angular/http";
 
 // App
 import { AppComponent } from "./app.component";
+import { NamegameModule } from "./namegame";
 import { routing } from "./app.routing";
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
-        routing
+        routing,
+
+        // App Modules
+        NamegameModule
     ],
     declarations: [
         AppComponent
