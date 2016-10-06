@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 
 // App
 import { TestComponent } from "./test.component";
+import { TesterComponent } from "./shared";
 import { DataService, NamesService } from "../shared";
 
 @NgModule({
@@ -11,7 +12,8 @@ import { DataService, NamesService } from "../shared";
         CommonModule
     ],
     declarations: [
-        TestComponent
+        TestComponent,
+        TesterComponent
     ],
     providers: [
         DataService,

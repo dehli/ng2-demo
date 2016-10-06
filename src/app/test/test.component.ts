@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { NamesService, Person } from "../shared";
 
 @Component({
     selector: "test",
@@ -8,15 +7,12 @@ import { NamesService, Person } from "../shared";
 })
 export class TestComponent implements OnInit {
 
-    private person: Person;
+    private highScore: number;
 
-    constructor(private namegameService: NamesService) {}
+    constructor() {}
 
     public ngOnInit(): void {
-        this.getRandomPerson();
+        this.highScore = 0;
     }
 
-    private getRandomPerson(): void {
-        this.namegameService.getRandomPerson().then(person => this.person = person);
-    }
 }

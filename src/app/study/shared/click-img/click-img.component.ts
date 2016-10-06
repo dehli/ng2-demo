@@ -17,11 +17,18 @@ export class ClickImgComponent implements OnInit{
     }
 
     private onClick($event: MouseEvent): void {
-        this.fading = true;
-        setTimeout(() => {
-            this.fading = false;
-        }, 1000);
 
-        this.click.emit($event);
+        // Only emit a click event if the animation has finished
+        if (!this.fading) {
+            this.fading = true;
+            setTimeout(() => {
+                this.fading = false;
+            }, 1000);
+
+            this.click.emit($event);
+        }
+        else {
+            $event.stopPropagation();
+        }
     }
 }

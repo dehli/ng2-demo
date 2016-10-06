@@ -1,0 +1,11 @@
+<div *ngIf="person">
+
+    <img
+        [src]="person.url"
+        alt="image" />
+
+</div>
+
+<div *ngIf="!person">
+    Loading...
+</div>
