@@ -5,7 +5,8 @@ import { TestComponent } from "./test";
 
 const routes: Routes = [
     { path: "study", component: StudyComponent },
-    { path: "test",  component: TestComponent }
+    { path: "test",  component: TestComponent },
+    { path: "", redirectTo: "/study", pathMatch: "full" },
 ];
 
 export const routing = RouterModule.forRoot(routes);
